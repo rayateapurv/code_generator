@@ -11,6 +11,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
+  textSize(15);
 
   xco = width / 2;
   yco = height / 2 + 25;
@@ -29,7 +30,7 @@ function draw() {
   // title text
   noStroke();
   fill(0);
-  text('Code Generator First Visual Prototype', width / 2, height - (yoff + 15));
+  text('Code Generator First Visual Prototype', width / 2, height - (yoff + 20));
   text('Click to randomly generate new Code!', width / 2, height - yoff);
 
   // text display conditions
@@ -37,25 +38,25 @@ function draw() {
     noStroke();
     fill(0);
     text(atrival + '(0);', width / 2, yoff);
-    text(shaval + '(' + xco + ', ' + yco + ', ' + xco + ', ' + rad + ');', width / 2, yoff + 15);
+    text(shaval + '(' + xco + ', ' + yco + ', ' + xco + ', ' + rad + ');', width / 2, yoff + 20);
 
   } else if (shaval !== 'line' && atrival == 'strokeWeight') {
     noStroke();
     fill(0);
     text(atrival + '(10);', width / 2, yoff);
-    text(shaval + '(' + xco + ', ' + yco + ', ' + xco + ', ' + rad + ');', width / 2, yoff + 15);
+    text(shaval + '(' + xco + ', ' + yco + ', ' + xco + ', ' + rad + ');', width / 2, yoff + 20);
 
   } else if (shaval == 'line' && atrival == 'strokeWeight') {
     noStroke();
     fill(0);
     text(atrival + '(10);', width / 2, yoff);
-    text(shaval + '(' + xco + ', ' + yco + ', ' + xco + ', ' + rad + ');', width / 2, yoff + 15);
+    text(shaval + '(' + xco + ', ' + yco + ', ' + xco + ', ' + rad + ');', width / 2, yoff + 20);
 
   } else {
     noStroke();
     fill(0);
     text(atrival + '(0);', width / 2, yoff);
-    text(shaval + '(' + xco + ', ' + yco + ', ' + rad + ', ' + rad + ');', width / 2, yoff + 15);
+    text(shaval + '(' + xco + ', ' + yco + ', ' + rad + ', ' + rad + ');', width / 2, yoff + 20);
   }
 
   console.log(shaval, atrival);
